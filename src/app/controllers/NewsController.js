@@ -1,16 +1,10 @@
-
 class NewsController {
-    //GET NEWS
-    index(req,res) {
-        res.render('news')
-    }
-
-    //SHOW SLUG
-    show(req,res) {
-        res.send("Slug")
-    }
+  //GET NEWS
+  index(req, res) {
+    res.render("news");
+  }
 }
 
-var newsController = new NewsController;
+var newsController = new NewsController();
 
-export {newsController}
+export { newsController };

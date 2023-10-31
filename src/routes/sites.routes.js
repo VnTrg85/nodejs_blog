@@ -1,13 +1,9 @@
-
-import express from 'express';
-import { sitesController } from '../app/controllers/SitesController.js';
-
+import express from "express";
+import { sitesController } from "../app/controllers/SitesController.js";
 
 const sitesRouter = express.Router();
 
+sitesRouter.use("/search", sitesController.search);
+sitesRouter.use("/", sitesController.home);
 
-sitesRouter.use('/search',sitesController.search)
-sitesRouter.use('/',sitesController.home)
-
-
-export {sitesRouter}
+export { sitesRouter };

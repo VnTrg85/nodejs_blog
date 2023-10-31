@@ -18,9 +18,9 @@ const app = express();
 app.use(express.static(path.join(__dirname, "public")));
 
 // MORGAN HTPP LOGGER
-// app.use(morgan('combined'))
-//Handle DATA Form(Body)
+// app.use(morgan("combined"));
 
+//Handle DATA Form(Body)
 app.use(
   express.urlencoded({
     extended: true,
@@ -41,4 +41,5 @@ app.set("views", "./src/resources/views");
 
 route(app);
 
+//Listen
 app.listen(3000);
